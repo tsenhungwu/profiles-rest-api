@@ -35,6 +35,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
+    # Custom model manager to control and create users.
     objects = UserProfileManager()
 
     USERNAME_FIELD = 'email'
